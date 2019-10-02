@@ -20,29 +20,37 @@ public final class ResolverProto {
 
     /**
      * <code>repeated string stringListValue = 1;</code>
+     * @return A list containing the stringListValue.
      */
     java.util.List<java.lang.String>
         getStringListValueList();
     /**
      * <code>repeated string stringListValue = 1;</code>
+     * @return The count of stringListValue.
      */
     int getStringListValueCount();
     /**
      * <code>repeated string stringListValue = 1;</code>
+     * @param index The index of the element to return.
+     * @return The stringListValue at the given index.
      */
     java.lang.String getStringListValue(int index);
     /**
      * <code>repeated string stringListValue = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the stringListValue at the given index.
      */
     com.google.protobuf.ByteString
         getStringListValueBytes(int index);
 
     /**
      * <code>string delimitedStringValue = 3;</code>
+     * @return The delimitedStringValue.
      */
     java.lang.String getDelimitedStringValue();
     /**
      * <code>string delimitedStringValue = 3;</code>
+     * @return The bytes for delimitedStringValue.
      */
     com.google.protobuf.ByteString
         getDelimitedStringValueBytes();
@@ -62,6 +70,13 @@ public final class ResolverProto {
     private ResolverTest() {
       stringListValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       delimitedStringValue_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ResolverTest();
     }
 
     @java.lang.Override
@@ -88,16 +103,9 @@ public final class ResolverProto {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 stringListValue_ = new com.google.protobuf.LazyStringArrayList();
                 mutable_bitField0_ |= 0x00000001;
               }
@@ -110,6 +118,13 @@ public final class ResolverProto {
               delimitedStringValue_ = s;
               break;
             }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
           }
         }
       } catch (com.google.protobuf.InvalidProtocolBufferException e) {
@@ -118,7 +133,7 @@ public final class ResolverProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           stringListValue_ = stringListValue_.getUnmodifiableView();
         }
         this.unknownFields = unknownFields.build();
@@ -130,6 +145,7 @@ public final class ResolverProto {
       return net.badata.protobuf.converter.proto.ResolverProto.internal_static_net_badata_protobuf_converter_proto_ResolverTest_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return net.badata.protobuf.converter.proto.ResolverProto.internal_static_net_badata_protobuf_converter_proto_ResolverTest_fieldAccessorTable
@@ -137,11 +153,11 @@ public final class ResolverProto {
               net.badata.protobuf.converter.proto.ResolverProto.ResolverTest.class, net.badata.protobuf.converter.proto.ResolverProto.ResolverTest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int STRINGLISTVALUE_FIELD_NUMBER = 1;
     private com.google.protobuf.LazyStringList stringListValue_;
     /**
      * <code>repeated string stringListValue = 1;</code>
+     * @return A list containing the stringListValue.
      */
     public com.google.protobuf.ProtocolStringList
         getStringListValueList() {
@@ -149,18 +165,23 @@ public final class ResolverProto {
     }
     /**
      * <code>repeated string stringListValue = 1;</code>
+     * @return The count of stringListValue.
      */
     public int getStringListValueCount() {
       return stringListValue_.size();
     }
     /**
      * <code>repeated string stringListValue = 1;</code>
+     * @param index The index of the element to return.
+     * @return The stringListValue at the given index.
      */
     public java.lang.String getStringListValue(int index) {
       return stringListValue_.get(index);
     }
     /**
      * <code>repeated string stringListValue = 1;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the stringListValue at the given index.
      */
     public com.google.protobuf.ByteString
         getStringListValueBytes(int index) {
@@ -171,6 +192,7 @@ public final class ResolverProto {
     private volatile java.lang.Object delimitedStringValue_;
     /**
      * <code>string delimitedStringValue = 3;</code>
+     * @return The delimitedStringValue.
      */
     public java.lang.String getDelimitedStringValue() {
       java.lang.Object ref = delimitedStringValue_;
@@ -186,6 +208,7 @@ public final class ResolverProto {
     }
     /**
      * <code>string delimitedStringValue = 3;</code>
+     * @return The bytes for delimitedStringValue.
      */
     public com.google.protobuf.ByteString
         getDelimitedStringValueBytes() {
@@ -202,6 +225,7 @@ public final class ResolverProto {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -211,6 +235,7 @@ public final class ResolverProto {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       for (int i = 0; i < stringListValue_.size(); i++) {
@@ -222,6 +247,7 @@ public final class ResolverProto {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -253,13 +279,12 @@ public final class ResolverProto {
       }
       net.badata.protobuf.converter.proto.ResolverProto.ResolverTest other = (net.badata.protobuf.converter.proto.ResolverProto.ResolverTest) obj;
 
-      boolean result = true;
-      result = result && getStringListValueList()
-          .equals(other.getStringListValueList());
-      result = result && getDelimitedStringValue()
-          .equals(other.getDelimitedStringValue());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getStringListValueList()
+          .equals(other.getStringListValueList())) return false;
+      if (!getDelimitedStringValue()
+          .equals(other.getDelimitedStringValue())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -350,6 +375,7 @@ public final class ResolverProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -357,6 +383,7 @@ public final class ResolverProto {
     public static Builder newBuilder(net.badata.protobuf.converter.proto.ResolverProto.ResolverTest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -380,6 +407,7 @@ public final class ResolverProto {
         return net.badata.protobuf.converter.proto.ResolverProto.internal_static_net_badata_protobuf_converter_proto_ResolverTest_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return net.badata.protobuf.converter.proto.ResolverProto.internal_static_net_badata_protobuf_converter_proto_ResolverTest_fieldAccessorTable
@@ -402,6 +430,7 @@ public final class ResolverProto {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         stringListValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -411,15 +440,18 @@ public final class ResolverProto {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return net.badata.protobuf.converter.proto.ResolverProto.internal_static_net_badata_protobuf_converter_proto_ResolverTest_descriptor;
       }
 
+      @java.lang.Override
       public net.badata.protobuf.converter.proto.ResolverProto.ResolverTest getDefaultInstanceForType() {
         return net.badata.protobuf.converter.proto.ResolverProto.ResolverTest.getDefaultInstance();
       }
 
+      @java.lang.Override
       public net.badata.protobuf.converter.proto.ResolverProto.ResolverTest build() {
         net.badata.protobuf.converter.proto.ResolverProto.ResolverTest result = buildPartial();
         if (!result.isInitialized()) {
@@ -428,47 +460,53 @@ public final class ResolverProto {
         return result;
       }
 
+      @java.lang.Override
       public net.badata.protobuf.converter.proto.ResolverProto.ResolverTest buildPartial() {
         net.badata.protobuf.converter.proto.ResolverProto.ResolverTest result = new net.badata.protobuf.converter.proto.ResolverProto.ResolverTest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
-        if (((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           stringListValue_ = stringListValue_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.stringListValue_ = stringListValue_;
         result.delimitedStringValue_ = delimitedStringValue_;
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof net.badata.protobuf.converter.proto.ResolverProto.ResolverTest) {
           return mergeFrom((net.badata.protobuf.converter.proto.ResolverProto.ResolverTest)other);
@@ -499,10 +537,12 @@ public final class ResolverProto {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -524,13 +564,14 @@ public final class ResolverProto {
 
       private com.google.protobuf.LazyStringList stringListValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureStringListValueIsMutable() {
-        if (!((bitField0_ & 0x00000001) == 0x00000001)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           stringListValue_ = new com.google.protobuf.LazyStringArrayList(stringListValue_);
           bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string stringListValue = 1;</code>
+       * @return A list containing the stringListValue.
        */
       public com.google.protobuf.ProtocolStringList
           getStringListValueList() {
@@ -538,18 +579,23 @@ public final class ResolverProto {
       }
       /**
        * <code>repeated string stringListValue = 1;</code>
+       * @return The count of stringListValue.
        */
       public int getStringListValueCount() {
         return stringListValue_.size();
       }
       /**
        * <code>repeated string stringListValue = 1;</code>
+       * @param index The index of the element to return.
+       * @return The stringListValue at the given index.
        */
       public java.lang.String getStringListValue(int index) {
         return stringListValue_.get(index);
       }
       /**
        * <code>repeated string stringListValue = 1;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the stringListValue at the given index.
        */
       public com.google.protobuf.ByteString
           getStringListValueBytes(int index) {
@@ -557,6 +603,9 @@ public final class ResolverProto {
       }
       /**
        * <code>repeated string stringListValue = 1;</code>
+       * @param index The index to set the value at.
+       * @param value The stringListValue to set.
+       * @return This builder for chaining.
        */
       public Builder setStringListValue(
           int index, java.lang.String value) {
@@ -570,6 +619,8 @@ public final class ResolverProto {
       }
       /**
        * <code>repeated string stringListValue = 1;</code>
+       * @param value The stringListValue to add.
+       * @return This builder for chaining.
        */
       public Builder addStringListValue(
           java.lang.String value) {
@@ -583,6 +634,8 @@ public final class ResolverProto {
       }
       /**
        * <code>repeated string stringListValue = 1;</code>
+       * @param values The stringListValue to add.
+       * @return This builder for chaining.
        */
       public Builder addAllStringListValue(
           java.lang.Iterable<java.lang.String> values) {
@@ -594,6 +647,7 @@ public final class ResolverProto {
       }
       /**
        * <code>repeated string stringListValue = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStringListValue() {
         stringListValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
@@ -603,6 +657,8 @@ public final class ResolverProto {
       }
       /**
        * <code>repeated string stringListValue = 1;</code>
+       * @param value The bytes of the stringListValue to add.
+       * @return This builder for chaining.
        */
       public Builder addStringListValueBytes(
           com.google.protobuf.ByteString value) {
@@ -619,6 +675,7 @@ public final class ResolverProto {
       private java.lang.Object delimitedStringValue_ = "";
       /**
        * <code>string delimitedStringValue = 3;</code>
+       * @return The delimitedStringValue.
        */
       public java.lang.String getDelimitedStringValue() {
         java.lang.Object ref = delimitedStringValue_;
@@ -634,6 +691,7 @@ public final class ResolverProto {
       }
       /**
        * <code>string delimitedStringValue = 3;</code>
+       * @return The bytes for delimitedStringValue.
        */
       public com.google.protobuf.ByteString
           getDelimitedStringValueBytes() {
@@ -650,6 +708,8 @@ public final class ResolverProto {
       }
       /**
        * <code>string delimitedStringValue = 3;</code>
+       * @param value The delimitedStringValue to set.
+       * @return This builder for chaining.
        */
       public Builder setDelimitedStringValue(
           java.lang.String value) {
@@ -663,6 +723,7 @@ public final class ResolverProto {
       }
       /**
        * <code>string delimitedStringValue = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDelimitedStringValue() {
         
@@ -672,6 +733,8 @@ public final class ResolverProto {
       }
       /**
        * <code>string delimitedStringValue = 3;</code>
+       * @param value The bytes for delimitedStringValue to set.
+       * @return This builder for chaining.
        */
       public Builder setDelimitedStringValueBytes(
           com.google.protobuf.ByteString value) {
@@ -684,11 +747,13 @@ public final class ResolverProto {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -710,6 +775,7 @@ public final class ResolverProto {
 
     private static final com.google.protobuf.Parser<ResolverTest>
         PARSER = new com.google.protobuf.AbstractParser<ResolverTest>() {
+      @java.lang.Override
       public ResolverTest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -727,6 +793,7 @@ public final class ResolverProto {
       return PARSER;
     }
 
+    @java.lang.Override
     public net.badata.protobuf.converter.proto.ResolverProto.ResolverTest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -753,18 +820,10 @@ public final class ResolverProto {
       "ringValue\030\003 \001(\tB4\n#net.badata.protobuf.c" +
       "onverter.protoB\rResolverProtob\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_net_badata_protobuf_converter_proto_ResolverTest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_net_badata_protobuf_converter_proto_ResolverTest_fieldAccessorTable = new

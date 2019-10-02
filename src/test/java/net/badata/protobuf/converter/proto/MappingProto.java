@@ -20,10 +20,12 @@ public final class MappingProto {
 
     /**
      * <code>string stringValue = 1;</code>
+     * @return The stringValue.
      */
     java.lang.String getStringValue();
     /**
      * <code>string stringValue = 1;</code>
+     * @return The bytes for stringValue.
      */
     com.google.protobuf.ByteString
         getStringValueBytes();
@@ -45,6 +47,13 @@ public final class MappingProto {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new NestedTest();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -57,7 +66,6 @@ public final class MappingProto {
       if (extensionRegistry == null) {
         throw new java.lang.NullPointerException();
       }
-      int mutable_bitField0_ = 0;
       com.google.protobuf.UnknownFieldSet.Builder unknownFields =
           com.google.protobuf.UnknownFieldSet.newBuilder();
       try {
@@ -68,17 +76,17 @@ public final class MappingProto {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 10: {
               java.lang.String s = input.readStringRequireUtf8();
 
               stringValue_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -98,6 +106,7 @@ public final class MappingProto {
       return net.badata.protobuf.converter.proto.MappingProto.internal_static_net_badata_protobuf_converter_proto_NestedTest_descriptor;
     }
 
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return net.badata.protobuf.converter.proto.MappingProto.internal_static_net_badata_protobuf_converter_proto_NestedTest_fieldAccessorTable
@@ -109,6 +118,7 @@ public final class MappingProto {
     private volatile java.lang.Object stringValue_;
     /**
      * <code>string stringValue = 1;</code>
+     * @return The stringValue.
      */
     public java.lang.String getStringValue() {
       java.lang.Object ref = stringValue_;
@@ -124,6 +134,7 @@ public final class MappingProto {
     }
     /**
      * <code>string stringValue = 1;</code>
+     * @return The bytes for stringValue.
      */
     public com.google.protobuf.ByteString
         getStringValueBytes() {
@@ -140,6 +151,7 @@ public final class MappingProto {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -149,6 +161,7 @@ public final class MappingProto {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (!getStringValueBytes().isEmpty()) {
@@ -157,6 +170,7 @@ public final class MappingProto {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -180,11 +194,10 @@ public final class MappingProto {
       }
       net.badata.protobuf.converter.proto.MappingProto.NestedTest other = (net.badata.protobuf.converter.proto.MappingProto.NestedTest) obj;
 
-      boolean result = true;
-      result = result && getStringValue()
-          .equals(other.getStringValue());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getStringValue()
+          .equals(other.getStringValue())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -271,6 +284,7 @@ public final class MappingProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -278,6 +292,7 @@ public final class MappingProto {
     public static Builder newBuilder(net.badata.protobuf.converter.proto.MappingProto.NestedTest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -301,6 +316,7 @@ public final class MappingProto {
         return net.badata.protobuf.converter.proto.MappingProto.internal_static_net_badata_protobuf_converter_proto_NestedTest_descriptor;
       }
 
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return net.badata.protobuf.converter.proto.MappingProto.internal_static_net_badata_protobuf_converter_proto_NestedTest_fieldAccessorTable
@@ -323,6 +339,7 @@ public final class MappingProto {
                 .alwaysUseFieldBuilders) {
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         stringValue_ = "";
@@ -330,15 +347,18 @@ public final class MappingProto {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return net.badata.protobuf.converter.proto.MappingProto.internal_static_net_badata_protobuf_converter_proto_NestedTest_descriptor;
       }
 
+      @java.lang.Override
       public net.badata.protobuf.converter.proto.MappingProto.NestedTest getDefaultInstanceForType() {
         return net.badata.protobuf.converter.proto.MappingProto.NestedTest.getDefaultInstance();
       }
 
+      @java.lang.Override
       public net.badata.protobuf.converter.proto.MappingProto.NestedTest build() {
         net.badata.protobuf.converter.proto.MappingProto.NestedTest result = buildPartial();
         if (!result.isInitialized()) {
@@ -347,6 +367,7 @@ public final class MappingProto {
         return result;
       }
 
+      @java.lang.Override
       public net.badata.protobuf.converter.proto.MappingProto.NestedTest buildPartial() {
         net.badata.protobuf.converter.proto.MappingProto.NestedTest result = new net.badata.protobuf.converter.proto.MappingProto.NestedTest(this);
         result.stringValue_ = stringValue_;
@@ -354,32 +375,39 @@ public final class MappingProto {
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof net.badata.protobuf.converter.proto.MappingProto.NestedTest) {
           return mergeFrom((net.badata.protobuf.converter.proto.MappingProto.NestedTest)other);
@@ -400,10 +428,12 @@ public final class MappingProto {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -425,6 +455,7 @@ public final class MappingProto {
       private java.lang.Object stringValue_ = "";
       /**
        * <code>string stringValue = 1;</code>
+       * @return The stringValue.
        */
       public java.lang.String getStringValue() {
         java.lang.Object ref = stringValue_;
@@ -440,6 +471,7 @@ public final class MappingProto {
       }
       /**
        * <code>string stringValue = 1;</code>
+       * @return The bytes for stringValue.
        */
       public com.google.protobuf.ByteString
           getStringValueBytes() {
@@ -456,6 +488,8 @@ public final class MappingProto {
       }
       /**
        * <code>string stringValue = 1;</code>
+       * @param value The stringValue to set.
+       * @return This builder for chaining.
        */
       public Builder setStringValue(
           java.lang.String value) {
@@ -469,6 +503,7 @@ public final class MappingProto {
       }
       /**
        * <code>string stringValue = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStringValue() {
         
@@ -478,6 +513,8 @@ public final class MappingProto {
       }
       /**
        * <code>string stringValue = 1;</code>
+       * @param value The bytes for stringValue to set.
+       * @return This builder for chaining.
        */
       public Builder setStringValueBytes(
           com.google.protobuf.ByteString value) {
@@ -490,11 +527,13 @@ public final class MappingProto {
         onChanged();
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -516,6 +555,7 @@ public final class MappingProto {
 
     private static final com.google.protobuf.Parser<NestedTest>
         PARSER = new com.google.protobuf.AbstractParser<NestedTest>() {
+      @java.lang.Override
       public NestedTest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -533,6 +573,7 @@ public final class MappingProto {
       return PARSER;
     }
 
+    @java.lang.Override
     public net.badata.protobuf.converter.proto.MappingProto.NestedTest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -545,45 +586,54 @@ public final class MappingProto {
 
     /**
      * <code>int32 intValue = 1;</code>
+     * @return The intValue.
      */
     int getIntValue();
 
     /**
      * <code>int64 longValue = 2;</code>
+     * @return The longValue.
      */
     long getLongValue();
 
     /**
      * <code>float floatValue = 3;</code>
+     * @return The floatValue.
      */
     float getFloatValue();
 
     /**
      * <code>double doubleValue = 4;</code>
+     * @return The doubleValue.
      */
     double getDoubleValue();
 
     /**
      * <code>bool booleanValue = 5;</code>
+     * @return The booleanValue.
      */
     boolean getBooleanValue();
 
     /**
      * <code>string stringValue = 6;</code>
+     * @return The stringValue.
      */
     java.lang.String getStringValue();
     /**
      * <code>string stringValue = 6;</code>
+     * @return The bytes for stringValue.
      */
     com.google.protobuf.ByteString
         getStringValueBytes();
 
     /**
      * <code>.net.badata.protobuf.converter.proto.NestedTest nestedValue = 7;</code>
+     * @return Whether the nestedValue field is set.
      */
     boolean hasNestedValue();
     /**
      * <code>.net.badata.protobuf.converter.proto.NestedTest nestedValue = 7;</code>
+     * @return The nestedValue.
      */
     net.badata.protobuf.converter.proto.MappingProto.NestedTest getNestedValue();
     /**
@@ -593,19 +643,25 @@ public final class MappingProto {
 
     /**
      * <code>repeated string stringListValue = 8;</code>
+     * @return A list containing the stringListValue.
      */
     java.util.List<java.lang.String>
         getStringListValueList();
     /**
      * <code>repeated string stringListValue = 8;</code>
+     * @return The count of stringListValue.
      */
     int getStringListValueCount();
     /**
      * <code>repeated string stringListValue = 8;</code>
+     * @param index The index of the element to return.
+     * @return The stringListValue at the given index.
      */
     java.lang.String getStringListValue(int index);
     /**
      * <code>repeated string stringListValue = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the stringListValue at the given index.
      */
     com.google.protobuf.ByteString
         getStringListValueBytes(int index);
@@ -715,14 +771,16 @@ public final class MappingProto {
       super(builder);
     }
     private MappingTest() {
-      intValue_ = 0;
-      longValue_ = 0L;
-      floatValue_ = 0F;
-      doubleValue_ = 0D;
-      booleanValue_ = false;
       stringValue_ = "";
       stringListValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       nestedListValue_ = java.util.Collections.emptyList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new MappingTest();
     }
 
     @java.lang.Override
@@ -749,13 +807,6 @@ public final class MappingProto {
             case 0:
               done = true;
               break;
-            default: {
-              if (!parseUnknownFieldProto3(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
             case 8: {
 
               intValue_ = input.readInt32();
@@ -802,27 +853,27 @@ public final class MappingProto {
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
-              if (!((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
                 stringListValue_ = new com.google.protobuf.LazyStringArrayList();
-                mutable_bitField0_ |= 0x00000080;
+                mutable_bitField0_ |= 0x00000001;
               }
               stringListValue_.add(s);
               break;
             }
             case 74: {
-              if (!((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
                 nestedListValue_ = new java.util.ArrayList<net.badata.protobuf.converter.proto.MappingProto.NestedTest>();
-                mutable_bitField0_ |= 0x00000100;
+                mutable_bitField0_ |= 0x00000002;
               }
               nestedListValue_.add(
                   input.readMessage(net.badata.protobuf.converter.proto.MappingProto.NestedTest.parser(), extensionRegistry));
               break;
             }
             case 82: {
-              if (!((mutable_bitField0_ & 0x00000200) == 0x00000200)) {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
                 simpleMap_ = com.google.protobuf.MapField.newMapField(
                     SimpleMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000200;
+                mutable_bitField0_ |= 0x00000004;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
               simpleMap__ = input.readMessage(
@@ -832,16 +883,23 @@ public final class MappingProto {
               break;
             }
             case 90: {
-              if (!((mutable_bitField0_ & 0x00000400) == 0x00000400)) {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
                 nestedMap_ = com.google.protobuf.MapField.newMapField(
                     NestedMapDefaultEntryHolder.defaultEntry);
-                mutable_bitField0_ |= 0x00000400;
+                mutable_bitField0_ |= 0x00000008;
               }
               com.google.protobuf.MapEntry<java.lang.String, net.badata.protobuf.converter.proto.MappingProto.NestedTest>
               nestedMap__ = input.readMessage(
                   NestedMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               nestedMap_.getMutableMap().put(
                   nestedMap__.getKey(), nestedMap__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
               break;
             }
           }
@@ -852,10 +910,10 @@ public final class MappingProto {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
-        if (((mutable_bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
           stringListValue_ = stringListValue_.getUnmodifiableView();
         }
-        if (((mutable_bitField0_ & 0x00000100) == 0x00000100)) {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
           nestedListValue_ = java.util.Collections.unmodifiableList(nestedListValue_);
         }
         this.unknownFields = unknownFields.build();
@@ -868,6 +926,7 @@ public final class MappingProto {
     }
 
     @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
@@ -880,6 +939,7 @@ public final class MappingProto {
               "Invalid map field number: " + number);
       }
     }
+    @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return net.badata.protobuf.converter.proto.MappingProto.internal_static_net_badata_protobuf_converter_proto_MappingTest_fieldAccessorTable
@@ -887,11 +947,11 @@ public final class MappingProto {
               net.badata.protobuf.converter.proto.MappingProto.MappingTest.class, net.badata.protobuf.converter.proto.MappingProto.MappingTest.Builder.class);
     }
 
-    private int bitField0_;
     public static final int INTVALUE_FIELD_NUMBER = 1;
     private int intValue_;
     /**
      * <code>int32 intValue = 1;</code>
+     * @return The intValue.
      */
     public int getIntValue() {
       return intValue_;
@@ -901,6 +961,7 @@ public final class MappingProto {
     private long longValue_;
     /**
      * <code>int64 longValue = 2;</code>
+     * @return The longValue.
      */
     public long getLongValue() {
       return longValue_;
@@ -910,6 +971,7 @@ public final class MappingProto {
     private float floatValue_;
     /**
      * <code>float floatValue = 3;</code>
+     * @return The floatValue.
      */
     public float getFloatValue() {
       return floatValue_;
@@ -919,6 +981,7 @@ public final class MappingProto {
     private double doubleValue_;
     /**
      * <code>double doubleValue = 4;</code>
+     * @return The doubleValue.
      */
     public double getDoubleValue() {
       return doubleValue_;
@@ -928,6 +991,7 @@ public final class MappingProto {
     private boolean booleanValue_;
     /**
      * <code>bool booleanValue = 5;</code>
+     * @return The booleanValue.
      */
     public boolean getBooleanValue() {
       return booleanValue_;
@@ -937,6 +1001,7 @@ public final class MappingProto {
     private volatile java.lang.Object stringValue_;
     /**
      * <code>string stringValue = 6;</code>
+     * @return The stringValue.
      */
     public java.lang.String getStringValue() {
       java.lang.Object ref = stringValue_;
@@ -952,6 +1017,7 @@ public final class MappingProto {
     }
     /**
      * <code>string stringValue = 6;</code>
+     * @return The bytes for stringValue.
      */
     public com.google.protobuf.ByteString
         getStringValueBytes() {
@@ -971,12 +1037,14 @@ public final class MappingProto {
     private net.badata.protobuf.converter.proto.MappingProto.NestedTest nestedValue_;
     /**
      * <code>.net.badata.protobuf.converter.proto.NestedTest nestedValue = 7;</code>
+     * @return Whether the nestedValue field is set.
      */
     public boolean hasNestedValue() {
       return nestedValue_ != null;
     }
     /**
      * <code>.net.badata.protobuf.converter.proto.NestedTest nestedValue = 7;</code>
+     * @return The nestedValue.
      */
     public net.badata.protobuf.converter.proto.MappingProto.NestedTest getNestedValue() {
       return nestedValue_ == null ? net.badata.protobuf.converter.proto.MappingProto.NestedTest.getDefaultInstance() : nestedValue_;
@@ -992,6 +1060,7 @@ public final class MappingProto {
     private com.google.protobuf.LazyStringList stringListValue_;
     /**
      * <code>repeated string stringListValue = 8;</code>
+     * @return A list containing the stringListValue.
      */
     public com.google.protobuf.ProtocolStringList
         getStringListValueList() {
@@ -999,18 +1068,23 @@ public final class MappingProto {
     }
     /**
      * <code>repeated string stringListValue = 8;</code>
+     * @return The count of stringListValue.
      */
     public int getStringListValueCount() {
       return stringListValue_.size();
     }
     /**
      * <code>repeated string stringListValue = 8;</code>
+     * @param index The index of the element to return.
+     * @return The stringListValue at the given index.
      */
     public java.lang.String getStringListValue(int index) {
       return stringListValue_.get(index);
     }
     /**
      * <code>repeated string stringListValue = 8;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the stringListValue at the given index.
      */
     public com.google.protobuf.ByteString
         getStringListValueBytes(int index) {
@@ -1205,6 +1279,7 @@ public final class MappingProto {
     }
 
     private byte memoizedIsInitialized = -1;
+    @java.lang.Override
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized == 1) return true;
@@ -1214,6 +1289,7 @@ public final class MappingProto {
       return true;
     }
 
+    @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
       if (intValue_ != 0) {
@@ -1258,6 +1334,7 @@ public final class MappingProto {
       unknownFields.writeTo(output);
     }
 
+    @java.lang.Override
     public int getSerializedSize() {
       int size = memoizedSize;
       if (size != -1) return size;
@@ -1337,38 +1414,35 @@ public final class MappingProto {
       }
       net.badata.protobuf.converter.proto.MappingProto.MappingTest other = (net.badata.protobuf.converter.proto.MappingProto.MappingTest) obj;
 
-      boolean result = true;
-      result = result && (getIntValue()
-          == other.getIntValue());
-      result = result && (getLongValue()
-          == other.getLongValue());
-      result = result && (
-          java.lang.Float.floatToIntBits(getFloatValue())
-          == java.lang.Float.floatToIntBits(
-              other.getFloatValue()));
-      result = result && (
-          java.lang.Double.doubleToLongBits(getDoubleValue())
-          == java.lang.Double.doubleToLongBits(
-              other.getDoubleValue()));
-      result = result && (getBooleanValue()
-          == other.getBooleanValue());
-      result = result && getStringValue()
-          .equals(other.getStringValue());
-      result = result && (hasNestedValue() == other.hasNestedValue());
+      if (getIntValue()
+          != other.getIntValue()) return false;
+      if (getLongValue()
+          != other.getLongValue()) return false;
+      if (java.lang.Float.floatToIntBits(getFloatValue())
+          != java.lang.Float.floatToIntBits(
+              other.getFloatValue())) return false;
+      if (java.lang.Double.doubleToLongBits(getDoubleValue())
+          != java.lang.Double.doubleToLongBits(
+              other.getDoubleValue())) return false;
+      if (getBooleanValue()
+          != other.getBooleanValue()) return false;
+      if (!getStringValue()
+          .equals(other.getStringValue())) return false;
+      if (hasNestedValue() != other.hasNestedValue()) return false;
       if (hasNestedValue()) {
-        result = result && getNestedValue()
-            .equals(other.getNestedValue());
+        if (!getNestedValue()
+            .equals(other.getNestedValue())) return false;
       }
-      result = result && getStringListValueList()
-          .equals(other.getStringListValueList());
-      result = result && getNestedListValueList()
-          .equals(other.getNestedListValueList());
-      result = result && internalGetSimpleMap().equals(
-          other.internalGetSimpleMap());
-      result = result && internalGetNestedMap().equals(
-          other.internalGetNestedMap());
-      result = result && unknownFields.equals(other.unknownFields);
-      return result;
+      if (!getStringListValueList()
+          .equals(other.getStringListValueList())) return false;
+      if (!getNestedListValueList()
+          .equals(other.getNestedListValueList())) return false;
+      if (!internalGetSimpleMap().equals(
+          other.internalGetSimpleMap())) return false;
+      if (!internalGetNestedMap().equals(
+          other.internalGetNestedMap())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
     }
 
     @java.lang.Override
@@ -1489,6 +1563,7 @@ public final class MappingProto {
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
 
+    @java.lang.Override
     public Builder newBuilderForType() { return newBuilder(); }
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
@@ -1496,6 +1571,7 @@ public final class MappingProto {
     public static Builder newBuilder(net.badata.protobuf.converter.proto.MappingProto.MappingTest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
+    @java.lang.Override
     public Builder toBuilder() {
       return this == DEFAULT_INSTANCE
           ? new Builder() : new Builder().mergeFrom(this);
@@ -1545,6 +1621,7 @@ public final class MappingProto {
                 "Invalid map field number: " + number);
         }
       }
+      @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return net.badata.protobuf.converter.proto.MappingProto.internal_static_net_badata_protobuf_converter_proto_MappingTest_fieldAccessorTable
@@ -1568,6 +1645,7 @@ public final class MappingProto {
           getNestedListValueFieldBuilder();
         }
       }
+      @java.lang.Override
       public Builder clear() {
         super.clear();
         intValue_ = 0;
@@ -1589,10 +1667,10 @@ public final class MappingProto {
           nestedValueBuilder_ = null;
         }
         stringListValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000001);
         if (nestedListValueBuilder_ == null) {
           nestedListValue_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           nestedListValueBuilder_.clear();
         }
@@ -1601,15 +1679,18 @@ public final class MappingProto {
         return this;
       }
 
+      @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
         return net.badata.protobuf.converter.proto.MappingProto.internal_static_net_badata_protobuf_converter_proto_MappingTest_descriptor;
       }
 
+      @java.lang.Override
       public net.badata.protobuf.converter.proto.MappingProto.MappingTest getDefaultInstanceForType() {
         return net.badata.protobuf.converter.proto.MappingProto.MappingTest.getDefaultInstance();
       }
 
+      @java.lang.Override
       public net.badata.protobuf.converter.proto.MappingProto.MappingTest build() {
         net.badata.protobuf.converter.proto.MappingProto.MappingTest result = buildPartial();
         if (!result.isInitialized()) {
@@ -1618,10 +1699,10 @@ public final class MappingProto {
         return result;
       }
 
+      @java.lang.Override
       public net.badata.protobuf.converter.proto.MappingProto.MappingTest buildPartial() {
         net.badata.protobuf.converter.proto.MappingProto.MappingTest result = new net.badata.protobuf.converter.proto.MappingProto.MappingTest(this);
         int from_bitField0_ = bitField0_;
-        int to_bitField0_ = 0;
         result.intValue_ = intValue_;
         result.longValue_ = longValue_;
         result.floatValue_ = floatValue_;
@@ -1633,15 +1714,15 @@ public final class MappingProto {
         } else {
           result.nestedValue_ = nestedValueBuilder_.build();
         }
-        if (((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (((bitField0_ & 0x00000001) != 0)) {
           stringListValue_ = stringListValue_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000080);
+          bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.stringListValue_ = stringListValue_;
         if (nestedListValueBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) == 0x00000100)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             nestedListValue_ = java.util.Collections.unmodifiableList(nestedListValue_);
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.nestedListValue_ = nestedListValue_;
         } else {
@@ -1651,37 +1732,43 @@ public final class MappingProto {
         result.simpleMap_.makeImmutable();
         result.nestedMap_ = internalGetNestedMap();
         result.nestedMap_.makeImmutable();
-        result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
       }
 
+      @java.lang.Override
       public Builder clone() {
-        return (Builder) super.clone();
+        return super.clone();
       }
+      @java.lang.Override
       public Builder setField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.setField(field, value);
+        return super.setField(field, value);
       }
+      @java.lang.Override
       public Builder clearField(
           com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return (Builder) super.clearField(field);
+        return super.clearField(field);
       }
+      @java.lang.Override
       public Builder clearOneof(
           com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return (Builder) super.clearOneof(oneof);
+        return super.clearOneof(oneof);
       }
+      @java.lang.Override
       public Builder setRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           int index, java.lang.Object value) {
-        return (Builder) super.setRepeatedField(field, index, value);
+        return super.setRepeatedField(field, index, value);
       }
+      @java.lang.Override
       public Builder addRepeatedField(
           com.google.protobuf.Descriptors.FieldDescriptor field,
           java.lang.Object value) {
-        return (Builder) super.addRepeatedField(field, value);
+        return super.addRepeatedField(field, value);
       }
+      @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
         if (other instanceof net.badata.protobuf.converter.proto.MappingProto.MappingTest) {
           return mergeFrom((net.badata.protobuf.converter.proto.MappingProto.MappingTest)other);
@@ -1718,7 +1805,7 @@ public final class MappingProto {
         if (!other.stringListValue_.isEmpty()) {
           if (stringListValue_.isEmpty()) {
             stringListValue_ = other.stringListValue_;
-            bitField0_ = (bitField0_ & ~0x00000080);
+            bitField0_ = (bitField0_ & ~0x00000001);
           } else {
             ensureStringListValueIsMutable();
             stringListValue_.addAll(other.stringListValue_);
@@ -1729,7 +1816,7 @@ public final class MappingProto {
           if (!other.nestedListValue_.isEmpty()) {
             if (nestedListValue_.isEmpty()) {
               nestedListValue_ = other.nestedListValue_;
-              bitField0_ = (bitField0_ & ~0x00000100);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureNestedListValueIsMutable();
               nestedListValue_.addAll(other.nestedListValue_);
@@ -1742,7 +1829,7 @@ public final class MappingProto {
               nestedListValueBuilder_.dispose();
               nestedListValueBuilder_ = null;
               nestedListValue_ = other.nestedListValue_;
-              bitField0_ = (bitField0_ & ~0x00000100);
+              bitField0_ = (bitField0_ & ~0x00000002);
               nestedListValueBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getNestedListValueFieldBuilder() : null;
@@ -1760,10 +1847,12 @@ public final class MappingProto {
         return this;
       }
 
+      @java.lang.Override
       public final boolean isInitialized() {
         return true;
       }
 
+      @java.lang.Override
       public Builder mergeFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1786,12 +1875,15 @@ public final class MappingProto {
       private int intValue_ ;
       /**
        * <code>int32 intValue = 1;</code>
+       * @return The intValue.
        */
       public int getIntValue() {
         return intValue_;
       }
       /**
        * <code>int32 intValue = 1;</code>
+       * @param value The intValue to set.
+       * @return This builder for chaining.
        */
       public Builder setIntValue(int value) {
         
@@ -1801,6 +1893,7 @@ public final class MappingProto {
       }
       /**
        * <code>int32 intValue = 1;</code>
+       * @return This builder for chaining.
        */
       public Builder clearIntValue() {
         
@@ -1812,12 +1905,15 @@ public final class MappingProto {
       private long longValue_ ;
       /**
        * <code>int64 longValue = 2;</code>
+       * @return The longValue.
        */
       public long getLongValue() {
         return longValue_;
       }
       /**
        * <code>int64 longValue = 2;</code>
+       * @param value The longValue to set.
+       * @return This builder for chaining.
        */
       public Builder setLongValue(long value) {
         
@@ -1827,6 +1923,7 @@ public final class MappingProto {
       }
       /**
        * <code>int64 longValue = 2;</code>
+       * @return This builder for chaining.
        */
       public Builder clearLongValue() {
         
@@ -1838,12 +1935,15 @@ public final class MappingProto {
       private float floatValue_ ;
       /**
        * <code>float floatValue = 3;</code>
+       * @return The floatValue.
        */
       public float getFloatValue() {
         return floatValue_;
       }
       /**
        * <code>float floatValue = 3;</code>
+       * @param value The floatValue to set.
+       * @return This builder for chaining.
        */
       public Builder setFloatValue(float value) {
         
@@ -1853,6 +1953,7 @@ public final class MappingProto {
       }
       /**
        * <code>float floatValue = 3;</code>
+       * @return This builder for chaining.
        */
       public Builder clearFloatValue() {
         
@@ -1864,12 +1965,15 @@ public final class MappingProto {
       private double doubleValue_ ;
       /**
        * <code>double doubleValue = 4;</code>
+       * @return The doubleValue.
        */
       public double getDoubleValue() {
         return doubleValue_;
       }
       /**
        * <code>double doubleValue = 4;</code>
+       * @param value The doubleValue to set.
+       * @return This builder for chaining.
        */
       public Builder setDoubleValue(double value) {
         
@@ -1879,6 +1983,7 @@ public final class MappingProto {
       }
       /**
        * <code>double doubleValue = 4;</code>
+       * @return This builder for chaining.
        */
       public Builder clearDoubleValue() {
         
@@ -1890,12 +1995,15 @@ public final class MappingProto {
       private boolean booleanValue_ ;
       /**
        * <code>bool booleanValue = 5;</code>
+       * @return The booleanValue.
        */
       public boolean getBooleanValue() {
         return booleanValue_;
       }
       /**
        * <code>bool booleanValue = 5;</code>
+       * @param value The booleanValue to set.
+       * @return This builder for chaining.
        */
       public Builder setBooleanValue(boolean value) {
         
@@ -1905,6 +2013,7 @@ public final class MappingProto {
       }
       /**
        * <code>bool booleanValue = 5;</code>
+       * @return This builder for chaining.
        */
       public Builder clearBooleanValue() {
         
@@ -1916,6 +2025,7 @@ public final class MappingProto {
       private java.lang.Object stringValue_ = "";
       /**
        * <code>string stringValue = 6;</code>
+       * @return The stringValue.
        */
       public java.lang.String getStringValue() {
         java.lang.Object ref = stringValue_;
@@ -1931,6 +2041,7 @@ public final class MappingProto {
       }
       /**
        * <code>string stringValue = 6;</code>
+       * @return The bytes for stringValue.
        */
       public com.google.protobuf.ByteString
           getStringValueBytes() {
@@ -1947,6 +2058,8 @@ public final class MappingProto {
       }
       /**
        * <code>string stringValue = 6;</code>
+       * @param value The stringValue to set.
+       * @return This builder for chaining.
        */
       public Builder setStringValue(
           java.lang.String value) {
@@ -1960,6 +2073,7 @@ public final class MappingProto {
       }
       /**
        * <code>string stringValue = 6;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStringValue() {
         
@@ -1969,6 +2083,8 @@ public final class MappingProto {
       }
       /**
        * <code>string stringValue = 6;</code>
+       * @param value The bytes for stringValue to set.
+       * @return This builder for chaining.
        */
       public Builder setStringValueBytes(
           com.google.protobuf.ByteString value) {
@@ -1982,17 +2098,19 @@ public final class MappingProto {
         return this;
       }
 
-      private net.badata.protobuf.converter.proto.MappingProto.NestedTest nestedValue_ = null;
+      private net.badata.protobuf.converter.proto.MappingProto.NestedTest nestedValue_;
       private com.google.protobuf.SingleFieldBuilderV3<
           net.badata.protobuf.converter.proto.MappingProto.NestedTest, net.badata.protobuf.converter.proto.MappingProto.NestedTest.Builder, net.badata.protobuf.converter.proto.MappingProto.NestedTestOrBuilder> nestedValueBuilder_;
       /**
        * <code>.net.badata.protobuf.converter.proto.NestedTest nestedValue = 7;</code>
+       * @return Whether the nestedValue field is set.
        */
       public boolean hasNestedValue() {
         return nestedValueBuilder_ != null || nestedValue_ != null;
       }
       /**
        * <code>.net.badata.protobuf.converter.proto.NestedTest nestedValue = 7;</code>
+       * @return The nestedValue.
        */
       public net.badata.protobuf.converter.proto.MappingProto.NestedTest getNestedValue() {
         if (nestedValueBuilder_ == null) {
@@ -2101,13 +2219,14 @@ public final class MappingProto {
 
       private com.google.protobuf.LazyStringList stringListValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureStringListValueIsMutable() {
-        if (!((bitField0_ & 0x00000080) == 0x00000080)) {
+        if (!((bitField0_ & 0x00000001) != 0)) {
           stringListValue_ = new com.google.protobuf.LazyStringArrayList(stringListValue_);
-          bitField0_ |= 0x00000080;
+          bitField0_ |= 0x00000001;
          }
       }
       /**
        * <code>repeated string stringListValue = 8;</code>
+       * @return A list containing the stringListValue.
        */
       public com.google.protobuf.ProtocolStringList
           getStringListValueList() {
@@ -2115,18 +2234,23 @@ public final class MappingProto {
       }
       /**
        * <code>repeated string stringListValue = 8;</code>
+       * @return The count of stringListValue.
        */
       public int getStringListValueCount() {
         return stringListValue_.size();
       }
       /**
        * <code>repeated string stringListValue = 8;</code>
+       * @param index The index of the element to return.
+       * @return The stringListValue at the given index.
        */
       public java.lang.String getStringListValue(int index) {
         return stringListValue_.get(index);
       }
       /**
        * <code>repeated string stringListValue = 8;</code>
+       * @param index The index of the value to return.
+       * @return The bytes of the stringListValue at the given index.
        */
       public com.google.protobuf.ByteString
           getStringListValueBytes(int index) {
@@ -2134,6 +2258,9 @@ public final class MappingProto {
       }
       /**
        * <code>repeated string stringListValue = 8;</code>
+       * @param index The index to set the value at.
+       * @param value The stringListValue to set.
+       * @return This builder for chaining.
        */
       public Builder setStringListValue(
           int index, java.lang.String value) {
@@ -2147,6 +2274,8 @@ public final class MappingProto {
       }
       /**
        * <code>repeated string stringListValue = 8;</code>
+       * @param value The stringListValue to add.
+       * @return This builder for chaining.
        */
       public Builder addStringListValue(
           java.lang.String value) {
@@ -2160,6 +2289,8 @@ public final class MappingProto {
       }
       /**
        * <code>repeated string stringListValue = 8;</code>
+       * @param values The stringListValue to add.
+       * @return This builder for chaining.
        */
       public Builder addAllStringListValue(
           java.lang.Iterable<java.lang.String> values) {
@@ -2171,15 +2302,18 @@ public final class MappingProto {
       }
       /**
        * <code>repeated string stringListValue = 8;</code>
+       * @return This builder for chaining.
        */
       public Builder clearStringListValue() {
         stringListValue_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000080);
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
       /**
        * <code>repeated string stringListValue = 8;</code>
+       * @param value The bytes of the stringListValue to add.
+       * @return This builder for chaining.
        */
       public Builder addStringListValueBytes(
           com.google.protobuf.ByteString value) {
@@ -2196,9 +2330,9 @@ public final class MappingProto {
       private java.util.List<net.badata.protobuf.converter.proto.MappingProto.NestedTest> nestedListValue_ =
         java.util.Collections.emptyList();
       private void ensureNestedListValueIsMutable() {
-        if (!((bitField0_ & 0x00000100) == 0x00000100)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           nestedListValue_ = new java.util.ArrayList<net.badata.protobuf.converter.proto.MappingProto.NestedTest>(nestedListValue_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -2348,7 +2482,7 @@ public final class MappingProto {
       public Builder clearNestedListValue() {
         if (nestedListValueBuilder_ == null) {
           nestedListValue_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           nestedListValueBuilder_.clear();
@@ -2425,7 +2559,7 @@ public final class MappingProto {
           nestedListValueBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               net.badata.protobuf.converter.proto.MappingProto.NestedTest, net.badata.protobuf.converter.proto.MappingProto.NestedTest.Builder, net.badata.protobuf.converter.proto.MappingProto.NestedTestOrBuilder>(
                   nestedListValue_,
-                  ((bitField0_ & 0x00000100) == 0x00000100),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           nestedListValue_ = null;
@@ -2678,11 +2812,13 @@ public final class MappingProto {
             .putAll(values);
         return this;
       }
+      @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFieldsProto3(unknownFields);
+        return super.setUnknownFields(unknownFields);
       }
 
+      @java.lang.Override
       public final Builder mergeUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
         return super.mergeUnknownFields(unknownFields);
@@ -2704,6 +2840,7 @@ public final class MappingProto {
 
     private static final com.google.protobuf.Parser<MappingTest>
         PARSER = new com.google.protobuf.AbstractParser<MappingTest>() {
+      @java.lang.Override
       public MappingTest parsePartialFrom(
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2721,6 +2858,7 @@ public final class MappingProto {
       return PARSER;
     }
 
+    @java.lang.Override
     public net.badata.protobuf.converter.proto.MappingProto.MappingTest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
@@ -2777,18 +2915,10 @@ public final class MappingProto {
       "et.badata.protobuf.converter.protoB\014Mapp" +
       "ingProtob\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        }, assigner);
+        });
     internal_static_net_badata_protobuf_converter_proto_NestedTest_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_net_badata_protobuf_converter_proto_NestedTest_fieldAccessorTable = new
