@@ -9,6 +9,10 @@ buildscript {
     }
 }
 
+plugins {
+    id "maven-publish"
+}
+
 apply plugin: 'java'
 apply plugin: 'maven'
 apply plugin: 'idea'
@@ -20,10 +24,10 @@ repositories {
     mavenCentral()
 }
 
-[ compileJava, compileTestJava ]*.options*.encoding = 'UTF-8'
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
 
-sourceCompatibility='11'
-targetCompatibility='11'
+sourceCompatibility = '11'
+targetCompatibility = '11'
 
 protobuf {
     protoc {
@@ -63,6 +67,26 @@ install {
                     distribution 'repo'
                 }
             }
+        }
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+        }
+    }
+    repositories {
+        maven {
+            credentials {
+                username "${repositoryUsername}"
+                password "${repositoryPassword}"
+            }
+            def stringVersion = project.version.toString()
+            url stringVersion.endsWith("SNAPSHOT") ? "${snapshotsRepositoryUrl}" : "${releasesRepositoryUrl}"
         }
     }
 }
